@@ -1,1 +1,2 @@
-hosting https://test-zeta-snowy-29.vercel.app/
+hosting https://test-pavel377dq-pavel377dqs-projects.vercel.app?_vercel_share=tFraEMDyl7tk5ccC39XhsiR5VOsY0vVW
+House accounting application that works through the keyboard to save selected apartments press ctrl+Enter
