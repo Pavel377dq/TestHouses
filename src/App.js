@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import HouseList from "./components/HouseList/HouseList";
+import PopUp from "./components/popUp/popUp";
+
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [open, setOpen] = useState({ isOpen: false, number: null });
+  const [data, setData] = useState([
+    { porchAparts: [] },
+    { porchAparts: [] },
+    { porchAparts: [] },
+    { porchAparts: [] },
+  ]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HouseList number={0} setOpen={setOpen} data={data} setData={setData} />
+      <HouseList number={1} setOpen={setOpen} data={data} setData={setData} />
+      <HouseList number={2} setOpen={setOpen} data={data} setData={setData} />
+      <HouseList number={3} setOpen={setOpen} data={data} setData={setData} />
+      {open.isOpen && (
+        <PopUp
+          setData={setData}
+          number={open.number}
+          data={data}
+          setOpen={setOpen}
+        />
+      )}
     </div>
   );
 }

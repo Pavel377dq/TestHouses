@@ -1,0 +1,81 @@
+@import "../../colors.scss";
+
+.popUp {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -125px;
+  margin-left: -250px;
+
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    border: 2px solid black;
+  }
+
+  &__element {
+    :active {
+      background-color: $pressed;
+    }
+    &_selected {
+      border: 2px solid $hover;
+    }
+  }
+
+  &__button {
+    width: 192px;
+    height: 24px;
+  }
+  &__List {
+    min-height: 238px;
+    background-color: white;
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+      width: 192px;
+      height: 24px;
+      background-color: $popUpColorThree;
+      color: $popUpColorTwo;
+      border-radius: 6px;
+      margin-top: 6px;
+    }
+
+    li:nth-child(1) {
+      background-color: $popUpColorOne;
+      color: white;
+      width: 208px;
+      height: 38px;
+      border-radius: 12px 12px 0 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    li:nth-child(8) {
+      background-color: $primary-color;
+      color: white;
+      width: 192px;
+      height: 24px;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 0;
+      border: none;
+      font: inherit;
+      color: inherit;
+      background-color: inherit;
+    }
+
+    /* Отступ слева в браузере Firefox, Safari, Chrome */
+    li {
+      list-style-type: none; /* Убираем маркеры */
+    }
+  }
+}

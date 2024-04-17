@@ -1,0 +1,54 @@
+@import "../../colors.scss";
+
+.houseList {
+  width: 360px;
+  height: 260px;
+  margin-bottom: 20px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: $primary-color;
+    border-radius: 6px;
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+  }
+  table {
+    border-collapse: collapse;
+  }
+
+  &__table-header {
+    height: 60px;
+    width: 180px;
+    font-weight: 500;
+    &_left {
+      border: 1px solid black;
+      border-left: 0;
+      border-top: 0;
+    }
+    &_right {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__element {
+    width: 180px;
+    height: 32px;
+    &_left {
+      border: 1px solid black;
+      border-left: transparent;
+    }
+    &_right {
+      border: 1px solid black;
+      border-right: transparent;
+    }
+  }
+}
