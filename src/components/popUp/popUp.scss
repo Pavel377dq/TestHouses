@@ -17,11 +17,15 @@
   }
 
   &__element {
+    box-sizing: border-box;
     :active {
       background-color: $pressed;
     }
-    &_selected {
-      border: 2px solid $hover;
+    :hover{
+        border: 2px solid $hover;
+    }
+    &_disabled{
+        border: 4px solid $pressed;
     }
   }
 
