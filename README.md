@@ -1,1 +1,1 @@
-хостинг https://test-zeta-snowy-29.vercel.app/
+hosting https://test-zeta-snowy-29.vercel.app/
